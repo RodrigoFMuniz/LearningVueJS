@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{contador}}</p>
+        <button v-on:click="somar(5, $event)">Somar 1</button>
+        <p v-on:mousemove="atualizarXY">Mouse: {{ x }} e {{ y }}
+            <span v-on:mousemove.stop = "teste">Parar Aqui</span>
+        </p>
+        <a v-on:click href="http://google.com">Google</a>
+  
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                contador: 0,
+                x: 0,
+                y: 0,
+            },
+            methods: {
+                somar(step, e){
+                    console.log(e)
+                    this.contador += step
+                },
+                atualizarXY(e){
+                   console.log(e)
+                   this.x=e.clientX
+                   this.y=e.clientY
+                },
+                teste(event){
+                    console.log("Substituindo a ação de atualizar coordenadas x e y por esta msg")
+                }
+                // parar(e){
+                //     e.stopPropagation()
+                // }
+            }
+        })
+    </script>
+</body>
+
+</html>
