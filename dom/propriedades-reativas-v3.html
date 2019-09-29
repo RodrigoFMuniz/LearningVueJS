@@ -28,7 +28,16 @@
             computed:{
                 res(){
                     console.log('teste')
-                    return resultado = this.contador > 5 ? 'Maior do que 5' : 'Menor do que 5'                    
+                    return this.contador > 5 ? 'Maior do que 5' : 'Menor do que 5'                    
+                }
+            },
+            watch:{
+                contador(novo, antigo){
+                    console.log(novo, antigo)
+                    setTimeout(()=>{
+                        this.contador = 0
+
+                    }, 2000)
                 }
             },
             methods: {
