@@ -1,0 +1,31 @@
+main{
+    display: grid;
+    grid-template-areas: "jogador monstro" "menu menu" "log log";
+    justify-items: center;
+    align-items: center;
+}
+#jogador{
+    grid-area: jogador;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+}
+#monstro{
+    grid-area: monstro;
+}
+.menu{
+    grid-area: menu;
+    width: 100%;
+    border: 1px solid blue;
+}
+#menu{
+    display: flex; 
+    justify-content: space-around; 
+    width: 40%;
+    margin: 0 auto;
+}
+.log{
+    grid-area: log;
+    width: 100%;
+    border: 1px solid chartreuse;
+}
