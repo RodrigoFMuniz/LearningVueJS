@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <title>Desafio</title>
   <script src="https://unpkg.com/vue"></script>
 </head>
+
 <body>
   <div id="desafio">
     <!-- 1) Ligue o botão para alternar a exibição dos dois
@@ -55,14 +57,14 @@
           {{ valor }}
         </template>
         <template v-else-if="Array.isArray(valor)">
-          Notas:  
+          Notas:
           <template>
-              <ul>
-                <li v-for="dado in valor">{{ dado }}</li>
-              </ul>
-           </template>
+            <ul>
+              <li v-for="dado in valor">{{ dado }}</li>
+            </ul>
+          </template>
         </template>
-        
+
       </li>
     </ul>
   </div>
