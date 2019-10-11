@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        #app{
+            display: flex;
+            justify-content: space-around;            
+        }
+        .demo{
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+            align-items: center;
+            margin: 5px;
+            border-radius: 50px;
+        }
+        .c1{
+            background: #f00;
+        }
+        .c2{
+            background: #0f0;
+        }
+        .c3{
+            background: #00f;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="demo" :class='estilo1' @click='aplicarC1=!aplicarC1'></div>
+        <div class="demo" :class='{c2:aplicarC1}' @click='aplicarC1=!aplicarC1'></div>
+        <div class="demo" :class='{c3:aplicarC1}' @click='aplicarC1=!aplicarC1'></div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                aplicarC1: false
+            },
+            computed:{
+                estilo1(){
+                    return {
+                        c1: this.aplicarC1,
+                        c2: !this.aplicarC1
+                        
+                        
+                    }
+                }
+            }
+        })
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .caixas {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .demo {
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+            align-items: center;
+            margin: 5px;
+        }
+
+        .c1 {
+            background: #f00;
+        }
+
+        .c2 {
+            background: #0f0;
+        }
+
+        .c3 {
+            background: #00f;
+        }
+        .c4{
+            transform: rotate(45deg);
+            transition: .5s
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="caixas">
+            <div class="demo" :style="[meuEstilo]"></div>
+            <div class="demo" :style='[meuEstilo]'></div>
+            <div class="demo"></div>
+        </div>
+        <hr>
+        <input type="text" v-model="cor">
+        <input type="text" v-model="largura">
+        <input type="text" v-model="radius">
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                cor: 'red',
+                largura: 100,
+                radius: 0
+            },
+            computed: {
+                meuEstilo(){
+                    return{
+                        backgroundColor: this.cor,
+                        width: this.largura + 'px',
+                        height: this.largura +'px',
+                        borderRadius: this.radius +'px'
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
