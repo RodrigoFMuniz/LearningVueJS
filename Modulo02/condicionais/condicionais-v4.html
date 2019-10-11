@@ -14,7 +14,7 @@
         <template v-if="logado">
             <p>Usuário Logado: {{ nome }}</p>
             <p>Perfil: Admin</p>
-        </template>        
+        </template>
         <p v-else-if="anonimo">Navegando como anônimo</p>
         <p v-else="!logado">Nenhum usuário logado</p>
         <button @click="logado=!logado">{{ logado ? 'Sair': 'Entrar'}}</button>
@@ -24,7 +24,7 @@
             Desenvolvido pra vc!
         </footer>
         <footer v-show="logado">
-                Desenvolvido pra vc desconhecido!
+            Desenvolvido pra vc desconhecido!
         </footer>
     </div>
 
