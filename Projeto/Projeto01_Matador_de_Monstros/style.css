@@ -1,31 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 main{
     display: grid;
-    grid-template-areas: "jogador monstro" "menu menu" "log log";
+    grid-template-areas: "principal principal" "menu menu" "log log";
     justify-items: center;
     align-items: center;
+}
+.players{
+    grid-area: principal;
+    display: grid;
+    width: 100%;
+    grid-template-areas: "jogador monstro";
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 0;
+    margin: 10px 0;
 }
 #jogador{
     grid-area: jogador;
     display: flex;
+    width: 100%;
     flex-direction: column;
-    border: 1px solid red;
+    text-align: center;  
 }
+
 #monstro{
     grid-area: monstro;
+    width: 100%;
+    text-align: center;  
+}
+#jogador h1, #monstro h1{
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+}
+#jogador .life-bar, #monstro .life-bar{
+    width: 80%;
+    height: 3vh;
+    margin: 10px auto;
+    border: 1px solid #aaa;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+.life-bar .life{
+    height: 100%;
+    background-color: rgba(0,150,0,0.8);
+}
+.life-bar .life.danger{
+    background-color: #f00;
+    border: 1px solid red;
+}
+#jogador h3, #monstro h3{
+    width: 80%;
+    margin: -10px auto;
+    font-size: 1rem;
 }
 .menu{
     grid-area: menu;
+    display: grid;
+    grid-template-areas: "buttons" "endGame"; 
+    grid-template-columns: auto;
+    padding: 20px 0;
     width: 100%;
-    border: 1px solid blue;
+    height: auto;
+    box-shadow: 0 1px 5px rgba(27, 3, 3, 0.8);
+    border-radius: 2px; 
 }
 #menu{
-    display: flex; 
-    justify-content: space-around; 
-    width: 40%;
-    margin: 0 auto;
+    grid-area: buttons;
+    display: flex;    
+    justify-content: center;
+    align-items: center;  
 }
-.log{
+#menu button{
+    margin: 0 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    border-style: none;
+    box-shadow: 0 1px 5px #000;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#menu button:active{
+    box-shadow: 0 1px 1px #000;
+    transition: 0.1s ease-in-out;
+}
+
+#menu button.ataque{
+    background-color: red;
+    color: #fff;
+    
+}
+#menu button.especial{
+    background-color: orange;
+    color: #fff;
+}
+#menu button.curar{
+    background-color: green;
+    color: #fff;
+}
+#menu button.desistir{
+    background-color: #CCC;
+    color: #000;
+}
+.endGame{
+    grid-area: endGame;
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+}
+.win{
+    color: green;
+}
+.lose{
+    color: red;
+}
+.newGame{
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    border-style: none;
+    box-shadow: 0 1px 5px #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: #00a1ff;
+    color: #fff;
+}
+#log{
     grid-area: log;
     width: 100%;
-    border: 1px solid chartreuse;
+    border: 1px solid #ccc;
+    padding: 10px 0;
+    margin: 10px 0;
+    box-shadow: 0 1px 5px rgba(27, 3, 3, 0.8);
+}
+.log{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px;
+
+}
+.log.player{
+    background-color: #00a1ff;
+    box-shadow: 0 2px 5px rgba(135, 157, 229, 1);
+}
+.log.monster{
+    background-color: #d6082a;
+    box-shadow: 0 2px 5px rgb(241, 4, 36);
+}
+.log.heal{
+    background-color: green;
+    box-shadow: 0 2px 5px rgb(23, 87, 4);
+}
+.log.winner{
+    background-color: rgb(18, 71, 18);
+    box-shadow: 0 2px 5px rgb(23, 87, 4);
+}
+.log.loser{
+    background-color: mediumorchid;
+    box-shadow: 0 2px 5px mediumpurple;
 }
