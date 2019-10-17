@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/vue"></script>
+    <title>Instâncias Vue externa</title>
+</head>
+
+<body>
+    <div id="app1">
+        {{ titulo }} 
+        {{ vm.novaInfo }} 
+        <button @click="alterar">Alterar</button>
+    </div>
+
+
+
+    <script>
+        const vm = new Vue({
+            el: "#app1",
+            data: {
+                titulo: 'teste1'
+            },
+            methods: {
+                alterar() {
+                    this.titulo += '!!'
+                }
+            }
+        })
+        /*Isto causa erro de propriedade não referenciada*/
+        vm.novaInfo = 'Teste'
+        console.log(vm.novaInfo)
+
+    </script>
+</body>
+
+</html>
