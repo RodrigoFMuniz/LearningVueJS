@@ -16,3 +16,5 @@ Documentação Oficial - Interligações de Classe e Estilo: https://br.vuejs.or
 Documentação Oficial - Renderização Condicional: https://br.vuejs.org/v2/guide/conditional.html
 
 Documentação Oficial - Renderização de Listas: https://br.vuejs.org/v2/guide/list.html
+
+Vue: https://br.vuejs.org/v2/guide/instance.html
