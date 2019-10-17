@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/vue"></script>
+    <title>Componente Vue</title>
+</head>
+
+<body>
+    <div id="app">
+        <comp></comp>
+        <!--como um componente-->
+        <comp></comp>
+        <!--como um componente-->
+        <div class="comp"></div>
+        <!--como uma classe-->
+    </div>
+
+
+
+    <script>
+        Vue.component('comp', {
+            //template:`<h1>Componente</h1>`
+            template: `
+            <div>
+                <h1>{{ aula }}</h1>
+                <h1>{{ modulo }}</h1>
+                <button @click="alterarAula">Alterar Aula</button>
+                <button @click="alterarModulo">Alterar módulo</button>           
+                
+            </div>
+            `,
+            data: function() {
+                return{
+                    aula: 'Aula: Montando instância Vue',
+                    modulo: 'Módulo: Instância Vue'
+                }
+            },
+            methods: {
+                alterarAula() {
+                    this.aula += '#'
+                },
+                alterarModulo() {
+                    this.modulo += '#'
+                }
+            }
+        })
+
+        const vm = new Vue({
+            el: "#app",
+            //    el: 'comp',
+            //    el: '.comp',
+        })
+
+    </script>
+</body>
+
+</html>
