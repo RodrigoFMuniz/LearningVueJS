@@ -53,10 +53,10 @@
 </template> 
 
 <script>
-import Footer from "./Footer.vue";
-import Navigation from "./Navigation.vue";
-import Carrousel from "./Carrousel.vue";
-import Menu from "./Menu.vue";
+import Footer from "@/components/template/Footer.vue";
+import Navigation from "@/components/template/Navigation.vue";
+import Carrousel from "@/components/user/Carrousel.vue";
+import Menu from "@/components/template/Menu.vue";
 
 export default {
   components: {
