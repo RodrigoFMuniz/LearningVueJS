@@ -18,3 +18,7 @@ Documentação Oficial - Renderização Condicional: https://br.vuejs.org/v2/gui
 Documentação Oficial - Renderização de Listas: https://br.vuejs.org/v2/guide/list.html
 
 Vue: https://br.vuejs.org/v2/guide/instance.html
+
+https://br.vuejs.org/v2/guide/components.html
+
+https://br.vuejs.org/v2/guide/components-registration.html
