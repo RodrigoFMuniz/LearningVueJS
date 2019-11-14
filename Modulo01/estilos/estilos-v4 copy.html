@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .sublinhado {
+            text-decoration: line-through;
+            color:rgb(8, 117, 117);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div v-for='tarefa in tarefas' :class='{sublinhado: tarefa.estaCompleta}'>{{tarefa.descricao | capitalizar}}</div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                tarefas:[
+                    {id:1, descricao: 'Tarefa 1', estaCompleta: true},
+                    {id:2, descricao: 'Tarefa 2', estaCompleta: false},
+                    {id:3, descricao: 'Tarefa 3', estaCompleta: true},
+                    {id:4, descricao: 'Tarefa 4', estaCompleta: false},
+                    {id:5, descricao: 'Tarefa 5', estaCompleta: true},
+                ]
+            },
+            filters:{
+                capitalizar: value => value.toUpperCase()
+            },
+            
+        })
+    </script>
+</body>
+
+</html>

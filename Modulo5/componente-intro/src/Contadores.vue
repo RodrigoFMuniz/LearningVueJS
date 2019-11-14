@@ -1,6 +1,6 @@
 <template>
     <div class="contadores">
-        <app-contador v-for="c in 5" :key="c"/>
+        <app-contador v-for="(c) in 3" :key="c"/>
     </div>
 </template>
 

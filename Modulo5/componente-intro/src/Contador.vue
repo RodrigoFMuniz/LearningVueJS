@@ -39,6 +39,11 @@ export default {
         outline: none;
         border-style: none;
         margin:5px; 
+        box-shadow: 0 0px 3px rgba(0,0,0,0.8);
+    }
 
+    .contador button:active{
+        box-shadow: 0 0 0 #fff;
+        transition: 0.1s
     }
 </style>
