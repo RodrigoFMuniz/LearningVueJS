@@ -5,7 +5,7 @@
         <button @click="alterarNome">Alterar Nome</button>
         <hr>
         <div class="componentes">
-            <app-usuario-info />
+            <app-usuario-info :nome='usuario' />
             <app-usuario-editar />
         </div>
     </div>
@@ -19,12 +19,15 @@ export default {
     components: { AppUsuarioInfo, AppUsuarioEditar },
     data(){
         return {
-            nome:'Pedro'
+            usuario:{
+                nome:'Pedro',
+                sobrenome: 'qualquer'
+            }
         }
     },
     methods:{
         alterarNome(){
-            this.nome='Ana'
+            this.usuario.nome='Ana'
         }
     }
 }
