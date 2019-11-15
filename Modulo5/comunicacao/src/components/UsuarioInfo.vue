@@ -3,7 +3,9 @@
         <h2>As Informações de Usuário</h2>
         <p>Vários detalhes...</p>
         <p>Nome do usuário: <strong>{{nome}}</strong></p>
+        <p>Idade do usuário: <strong>{{idade}}</strong></p>
         <button @click="reiniciarNome">Reiniciar nome</button>
+        <button @click="reiniciarFn">Reiniciar nome(CallBack)</button>
     </div>
 </template>
 
@@ -20,7 +22,10 @@ export default {
         nome:{
             type: String,
             default: 'Anonimo'
-        } 
+        },
+        reiniciarFn: Function,
+        idade: Number,
+        alterarIdadeFn: Function
     },
     // inserindo atributos
     // props:{
