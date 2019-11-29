@@ -2,21 +2,23 @@
     <div class="container">
         <h1>Componente Usuário</h1>
         <p>Esse é um componente muito legal!</p>
-        <p>Nome é <strong>{{nome}}</strong></p>
+        <!-- <p>Nome é <strong>{{nome}}</strong></p>
         <p>Idade é: <strong>{{idade}}</strong></p>
-        <button @click="alterarNome">Alterar Nome</button>
+        <button @click="alterarNome">Alterar Nome</button> -->
         <hr>
         <div class="componentes">
-            <app-usuario-info 
+            <!-- <app-usuario-info
             :nome='nome'
-            :idade='idade' 
-            @nomeMudou="nome=$event.new"  
+            :idade='idade'
+            @nomeMudou="nome=$event.new"
             :reiniciarFn="reiniciarNome"
-            :alterarIdadeFn="alterarIdade" />
-            <app-usuario-editar 
-            :idade="idade" 
-            @idadeMudou ="idade=$event"
-            :alterarIdadeFn="alterarIdade"/>
+            alterarIdadeFn="alterarIdade" />
+            <app-usuario-editar
+            :idadeVindaDoPai="idade"
+             -->
+             <!-- /> -->
+             <app-usuario-info></app-usuario-info >
+             <app-usuario-editar></app-usuario-editar>
         </div>
     </div>
 </template>
