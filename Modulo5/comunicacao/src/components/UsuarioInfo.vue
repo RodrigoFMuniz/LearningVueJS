@@ -53,13 +53,14 @@ export default {
         //         old
         //         })
         // },
+    },
         created(){
                 barramento.$on('idade-mudou', (idadeEnviadaPeloPai)=>{
                     this.idadeIrmao = idadeEnviadaPeloPai
                     
                 })
         }
-    }
+    
     
 }
 </script>

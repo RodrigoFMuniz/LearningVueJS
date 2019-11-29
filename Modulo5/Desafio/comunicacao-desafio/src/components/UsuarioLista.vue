@@ -24,6 +24,7 @@ export default {
     methods:{
         clicouNoItem(usuario){
             bar.clicarNaLista(usuario)
+            this.usuarios.pop()
         }
     }
 }
@@ -46,6 +47,7 @@ export default {
     th, td {
         padding: 15px;
         border-bottom: 1px solid #CCC;
+        cursor: pointer;
     }
 
     tbody tr:hover {

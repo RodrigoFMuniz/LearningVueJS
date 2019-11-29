@@ -23,7 +23,7 @@ export default {
     //     alterarIdadeFn: Function
     // },
     methods:{
-        alterarIdade(){           
+        alterarIdade(){          
             
             barramento.$emit('idade-mudou', ++this.idadeEnviadaPeloPai)
         }

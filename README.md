@@ -22,3 +22,7 @@ Vue: https://br.vuejs.org/v2/guide/instance.html
 https://br.vuejs.org/v2/guide/components.html
 
 https://br.vuejs.org/v2/guide/components-registration.html
+
+Props: https://br.vuejs.org/v2/guide/components.html#Passando-Dados-aos-Filhos-com-Props
+
+Personalizados: https://br.vuejs.org/v2/guide/components.html#Enviando-Mensagens-ao-Pai-com-Eventos
